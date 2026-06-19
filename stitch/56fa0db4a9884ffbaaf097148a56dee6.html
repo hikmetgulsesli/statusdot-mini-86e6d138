@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Three Editor - StatusDot Mini</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom Pulse Animation for Warn Status */
+        @keyframes slow-pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(1.1); }
+        }
+        .animate-slow-pulse {
+            animation: slow-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+    </style>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error-container": "#93000a",
+                    "on-background": "#d3e4fe",
+                    "on-tertiary-fixed": "#2a1700",
+                    "secondary": "#4edea3",
+                    "error": "#ffb4ab",
+                    "on-tertiary-container": "#b47300",
+                    "surface-container": "#102034",
+                    "on-primary-fixed-variant": "#3f465c",
+                    "tertiary-fixed-dim": "#ffb95f",
+                    "surface-container-highest": "#26364a",
+                    "on-surface-variant": "#c6c6cd",
+                    "primary-fixed-dim": "#bec6e0",
+                    "on-primary-container": "#798098",
+                    "on-error-container": "#ffdad6",
+                    "surface-bright": "#2a3a4f",
+                    "primary-fixed": "#dae2fd",
+                    "outline": "#909097",
+                    "surface-dim": "#031427",
+                    "on-secondary": "#003824",
+                    "on-secondary-container": "#00311f",
+                    "tertiary-container": "#251400",
+                    "tertiary-fixed": "#ffddb8",
+                    "tertiary": "#ffb95f",
+                    "surface": "#031427",
+                    "inverse-on-surface": "#213145",
+                    "surface-container-low": "#0b1c30",
+                    "on-secondary-fixed": "#002113",
+                    "secondary-fixed-dim": "#4edea3",
+                    "on-surface": "#d3e4fe",
+                    "background": "#031427",
+                    "inverse-primary": "#565e74",
+                    "secondary-container": "#00a572",
+                    "primary": "#bec6e0",
+                    "on-primary-fixed": "#131b2e",
+                    "secondary-fixed": "#6ffbbe",
+                    "on-tertiary": "#472a00",
+                    "surface-variant": "#26364a",
+                    "on-tertiary-fixed-variant": "#653e00",
+                    "surface-tint": "#bec6e0",
+                    "on-primary": "#283044",
+                    "inverse-surface": "#d3e4fe",
+                    "outline-variant": "#45464d",
+                    "primary-container": "#0f172a",
+                    "surface-container-high": "#1b2b3f",
+                    "on-error": "#690005",
+                    "surface-container-lowest": "#000f21",
+                    "on-secondary-fixed-variant": "#005236"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "container-padding": "12px",
+                    "grid-gutter": "12px",
+                    "stack-tight": "4px",
+                    "unit": "4px",
+                    "element-gap": "8px"
+            },
+            "fontFamily": {
+                    "body-sm": ["Inter"],
+                    "body-md": ["Inter"],
+                    "label-caps": ["JetBrains Mono"],
+                    "headline-sm": ["Inter"],
+                    "mono-data": ["JetBrains Mono"]
+            },
+            "fontSize": {
+                    "body-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0", "fontWeight": "400"}],
+                    "body-md": ["13px", {"lineHeight": "18px", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                    "label-caps": ["10px", {"lineHeight": "12px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "headline-sm": ["16px", {"lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "mono-data": ["11px", {"lineHeight": "14px", "letterSpacing": "0", "fontWeight": "500"}]
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="bg-background text-on-background min-h-screen antialiased flex flex-col items-center justify-center py-12 px-container-padding">
+<!-- Suppressed Main Nav due to Task-Focused Intent. Using localized back navigation. -->
+<div class="w-full max-w-2xl flex flex-col gap-element-gap">
+<!-- Header & Unsaved Feedback -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
+<div class="flex items-center gap-3">
+<button aria-label="Go back" class="text-on-surface-variant hover:text-on-surface transition-colors flex items-center justify-center h-8 w-8 rounded-DEFAULT bg-surface-container-highest border border-outline-variant">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+</button>
+<h1 class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Three Editor</h1>
+</div>
+<div class="flex items-center gap-2 bg-tertiary-container/30 border border-tertiary/20 px-3 py-1.5 rounded-DEFAULT">
+<span class="material-symbols-outlined text-[14px] text-tertiary">edit_note</span>
+<span class="font-body-sm text-body-sm text-tertiary-fixed-dim">You have unsaved changes</span>
+</div>
+</div>
+<!-- Main Form Area -->
+<form class="flex flex-col gap-stack-tight">
+<!-- Bento Box 1: Core Identification -->
+<div class="bg-surface-container border border-outline-variant rounded-DEFAULT p-4 flex flex-col gap-6 relative overflow-hidden">
+<!-- Subtle grid background accent -->
+<div class="absolute inset-0 pointer-events-none opacity-5" style="background-image: radial-gradient(circle at 1px 1px, #d3e4fe 1px, transparent 0); background-size: 16px 16px;"></div>
+<div class="relative z-10 flex flex-col gap-element-gap">
+<div class="flex justify-between items-end mb-2">
+<label class="font-label-caps text-label-caps text-on-surface uppercase flex items-center gap-1" for="dot-name">
+                            Entity Name
+                            <span aria-hidden="true" class="text-error">*</span>
+</label>
+<span class="font-body-sm text-body-sm text-error flex items-center gap-1" id="name-error">
+<span class="material-symbols-outlined text-[14px]">error</span>
+                            Name cannot be empty
+                        </span>
+</div>
+<!-- Simulated Error State Input -->
+<input aria-describedby="name-error" class="w-full bg-surface-dim border border-error text-on-surface font-mono-data text-mono-data px-3 py-2.5 rounded-DEFAULT focus:outline-none focus:ring-1 focus:ring-error transition-colors placeholder:text-on-surface-variant/50" id="dot-name" name="dot-name" placeholder="e.g. Database Cluster Alpha" required="" type="text" value=""/>
+</div>
+<div class="relative z-10 flex flex-col gap-element-gap">
+<label class="font-label-caps text-label-caps text-on-surface uppercase" for="dot-desc">
+                        Description (Optional)
+                    </label>
+<textarea class="w-full bg-surface-dim border border-outline-variant text-on-surface font-body-md text-body-md px-3 py-2.5 rounded-DEFAULT focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-colors placeholder:text-on-surface-variant/50 resize-none" id="dot-desc" name="dot-desc" placeholder="Context or specific routing details..." rows="3"></textarea>
+</div>
+</div>
+<!-- Bento Box 2: Status Configuration -->
+<div class="bg-surface-container border border-outline-variant rounded-DEFAULT p-4 flex flex-col gap-element-gap mt-4">
+<label class="font-label-caps text-label-caps text-on-surface uppercase mb-2 block">
+                    Initial Status State
+                </label>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-unit">
+<!-- Ready Option -->
+<label class="relative flex items-center p-3 rounded-DEFAULT border border-outline-variant bg-surface-container-low cursor-pointer hover:bg-surface-container-highest transition-colors has-[:checked]:border-secondary has-[:checked]:bg-secondary/5">
+<input class="peer sr-only" name="status-select" type="radio" value="ready"/>
+<div class="flex items-center gap-3 w-full">
+<div class="flex items-center justify-center w-6 h-6 rounded-full bg-surface-dim border border-outline-variant peer-checked:border-secondary">
+<div class="h-2.5 w-2.5 rounded-full bg-secondary shadow-[0_0_8px_rgba(78,222,163,0.6)]"></div>
+</div>
+<span class="font-mono-data text-mono-data text-on-surface">Ready</span>
+</div>
+</label>
+<!-- Warn Option -->
+<label class="relative flex items-center p-3 rounded-DEFAULT border border-outline-variant bg-surface-container-low cursor-pointer hover:bg-surface-container-highest transition-colors has-[:checked]:border-tertiary has-[:checked]:bg-tertiary/5">
+<input checked="" class="peer sr-only" name="status-select" type="radio" value="warn"/>
+<div class="flex items-center gap-3 w-full">
+<div class="flex items-center justify-center w-6 h-6 rounded-full bg-surface-dim border border-tertiary">
+<div class="h-2.5 w-2.5 rounded-full bg-tertiary animate-slow-pulse"></div>
+</div>
+<span class="font-mono-data text-mono-data text-on-surface">Warn</span>
+</div>
+</label>
+<!-- Fail Option -->
+<label class="relative flex items-center p-3 rounded-DEFAULT border border-outline-variant bg-surface-container-low cursor-pointer hover:bg-surface-container-highest transition-colors has-[:checked]:border-error has-[:checked]:bg-error/5">
+<input class="peer sr-only" name="status-select" type="radio" value="fail"/>
+<div class="flex items-center gap-3 w-full">
+<div class="flex items-center justify-center w-6 h-6 rounded-full bg-surface-dim border border-outline-variant peer-checked:border-error">
+<div class="h-2.5 w-2.5 rounded-full bg-error border-[1.5px] border-white"></div>
+</div>
+<span class="font-mono-data text-mono-data text-on-surface">Fail</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex items-center justify-end gap-3 mt-6 pt-4 border-t border-outline-variant/50">
+<button aria-label="Cancel editing" class="px-4 py-2 rounded-DEFAULT font-body-md text-body-md font-medium text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors border border-transparent" type="button">
+                    Cancel
+                </button>
+<button aria-label="Save changes" class="px-5 py-2 rounded-DEFAULT font-body-md text-body-md font-medium bg-secondary-container text-on-secondary-container hover:bg-secondary hover:text-on-secondary transition-colors flex items-center gap-2 border border-transparent" type="submit">
+<span class="material-symbols-outlined text-[18px]">save</span>
+                    Save Changes
+                </button>
+</div>
+</form>
+</div>
+</body></html>

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Three Operations - StatusDot Mini</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error-container": "#93000a",
+                    "on-background": "#d3e4fe",
+                    "on-tertiary-fixed": "#2a1700",
+                    "secondary": "#4edea3",
+                    "error": "#ffb4ab",
+                    "on-tertiary-container": "#b47300",
+                    "surface-container": "#102034",
+                    "on-primary-fixed-variant": "#3f465c",
+                    "tertiary-fixed-dim": "#ffb95f",
+                    "surface-container-highest": "#26364a",
+                    "on-surface-variant": "#c6c6cd",
+                    "primary-fixed-dim": "#bec6e0",
+                    "on-primary-container": "#798098",
+                    "on-error-container": "#ffdad6",
+                    "surface-bright": "#2a3a4f",
+                    "primary-fixed": "#dae2fd",
+                    "outline": "#909097",
+                    "surface-dim": "#031427",
+                    "on-secondary": "#003824",
+                    "on-secondary-container": "#00311f",
+                    "tertiary-container": "#251400",
+                    "tertiary-fixed": "#ffddb8",
+                    "tertiary": "#ffb95f",
+                    "surface": "#031427",
+                    "inverse-on-surface": "#213145",
+                    "surface-container-low": "#0b1c30",
+                    "on-secondary-fixed": "#002113",
+                    "secondary-fixed-dim": "#4edea3",
+                    "on-surface": "#d3e4fe",
+                    "background": "#031427",
+                    "inverse-primary": "#565e74",
+                    "secondary-container": "#00a572",
+                    "primary": "#bec6e0",
+                    "on-primary-fixed": "#131b2e",
+                    "secondary-fixed": "#6ffbbe",
+                    "on-tertiary": "#472a00",
+                    "surface-variant": "#26364a",
+                    "on-tertiary-fixed-variant": "#653e00",
+                    "surface-tint": "#bec6e0",
+                    "on-primary": "#283044",
+                    "inverse-surface": "#d3e4fe",
+                    "outline-variant": "#45464d",
+                    "primary-container": "#0f172a",
+                    "surface-container-high": "#1b2b3f",
+                    "on-error": "#690005",
+                    "surface-container-lowest": "#000f21",
+                    "on-secondary-fixed-variant": "#005236"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "container-padding": "12px",
+                    "grid-gutter": "12px",
+                    "stack-tight": "4px",
+                    "unit": "4px",
+                    "element-gap": "8px"
+            },
+            "fontFamily": {
+                    "body-sm": [
+                            "Inter"
+                    ],
+                    "body-md": [
+                            "Inter"
+                    ],
+                    "label-caps": [
+                            "JetBrains Mono"
+                    ],
+                    "headline-sm": [
+                            "Inter"
+                    ],
+                    "mono-data": [
+                            "JetBrains Mono"
+                    ]
+            },
+            "fontSize": {
+                    "body-sm": [
+                            "12px",
+                            {
+                                    "lineHeight": "16px",
+                                    "letterSpacing": "0",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "body-md": [
+                            "13px",
+                            {
+                                    "lineHeight": "18px",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "label-caps": [
+                            "10px",
+                            {
+                                    "lineHeight": "12px",
+                                    "letterSpacing": "0.05em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "headline-sm": [
+                            "16px",
+                            {
+                                    "lineHeight": "20px",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "mono-data": [
+                            "11px",
+                            {
+                                    "lineHeight": "14px",
+                                    "letterSpacing": "0",
+                                    "fontWeight": "500"
+                            }
+                    ]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .pulse-warn {
+            animation: pulse-amber 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse-amber {
+            0%, 100% { opacity: 1; }
+            50% { opacity: .5; }
+        }
+        .glow-ready {
+            box-shadow: 0 0 8px 0 rgba(78, 222, 163, 0.4);
+        }
+        .ring-fail {
+            box-shadow: inset 0 0 0 1px #fff;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+            height: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #45464d;
+            border-radius: 2px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #909097;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex overflow-hidden">
+<!-- SideNavBar -->
+<nav class="hidden md:flex flex-col py-4 px-2 gap-stack-tight bg-surface-container-low dark:bg-surface-container-low border-r border-outline-variant h-full w-64 fixed left-0 top-0 z-20">
+<div class="px-3 pb-4 mb-4 border-b border-outline-variant flex items-center gap-3">
+<img alt="System Status" class="w-8 h-8 rounded-DEFAULT bg-surface-variant object-cover" data-alt="A stylized, minimalist geometric icon serving as an avatar or logo for a technical dashboard. It should feature precise lines and a muted color palette of deep slate blue and emerald green. The style is modern corporate, clean, and highly professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7zkSY4Ael22oVBRbi_RM6R3lpYZ1L1XkBCsvxGNpsJKBdn4dxN-xkdP5Ft8kbg_KPgSw2JO04UMBZBVOQshNT1TgQNeW67K6M7K3DCYnGDFqwZlDSjbQ_28qK6L7CO437rdIUYNBPOI5Q7uhkR9oxWpiRGV7mVFX_7Xr4BHAmYumb6wvKjJFIorRdKCp5X9lfazfQ6E60EQ99h8NhWtEHdCRaItTlf52c84f0g7rLcjgwv4EjWV_YxWXOZCWujN_97DMkld9f1jAL"/>
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface">SDM-Utility</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">v1.0.4-stable</div>
+</div>
+</div>
+<div class="flex flex-col gap-1 flex-grow">
+<!-- Active: Dashboard maps to Dashboard -->
+<a class="flex items-center gap-3 px-3 py-2 bg-secondary-container text-on-secondary-container rounded-lg transition-all duration-150 group cursor-pointer" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="grid_view" style="font-variation-settings: 'FILL' 1;">grid_view</span>
+<span class="font-body-md text-body-md font-medium">Overview</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded-lg transition-all duration-150 group cursor-pointer" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="memory">memory</span>
+<span class="font-body-md text-body-md">System</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded-lg transition-all duration-150 group cursor-pointer" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="lan">lan</span>
+<span class="font-body-md text-body-md">Network</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded-lg transition-all duration-150 group cursor-pointer" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="ios_share">ios_share</span>
+<span class="font-body-md text-body-md">Export</span>
+</a>
+</div>
+<div class="mt-auto px-2 pt-4 border-t border-outline-variant">
+<button class="w-full py-2 px-4 bg-surface-variant text-on-surface hover:bg-surface-bright rounded-DEFAULT transition-colors font-body-sm text-body-sm flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[16px]" data-icon="sync">sync</span>
+                Force Sync
+            </button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-1 flex flex-col md:ml-64 h-screen bg-background">
+<!-- TopAppBar (Mobile Only) -->
+<header class="md:hidden flex justify-between items-center w-full px-container-padding h-12 bg-surface-container dark:bg-surface-container border-b border-outline-variant z-10 sticky top-0">
+<div class="font-label-caps text-label-caps text-secondary uppercase tracking-widest font-extrabold">STATUSDOT MINI</div>
+<div class="flex items-center gap-3 text-primary dark:text-primary">
+<button class="hover:bg-surface-bright transition-colors p-1 rounded-DEFAULT cursor-pointer active:opacity-80">
+<span class="material-symbols-outlined text-[20px]" data-icon="download">download</span>
+</button>
+<button class="hover:bg-surface-bright transition-colors p-1 rounded-DEFAULT cursor-pointer active:opacity-80">
+<span class="material-symbols-outlined text-[20px]" data-icon="settings">settings</span>
+</button>
+<img alt="User profile" class="w-6 h-6 rounded-full object-cover border border-outline-variant" data-alt="A small, professional user avatar portrait. The image should be closely cropped on a person's face. The lighting is studio quality, soft and professional. The background should be a neutral, dark corporate color like deep slate." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdIqTNCdL1Srr-pDJyadNPYkVS6mMpVL2Dg6QGklSBVe11oibSh_XNMSkA6OKVwdH55LrxhC1frXocqA4UtwkoH-euVYCp-sDgO6kUkvaxnpp6erG0hri8Y65sJKMRrW4B82jN5j0nhUnzTUVdVtG5Jy2jzW5HP0gjvdG5RJrggxwKOkMVkscv-oOefubqHNtmi1eht3vaF7pAIwZNyPcNItMHbCinhjlQH03lwwTY2e_jTiKRCXmnjFA3LsMOUY5IjqUkoAkvVjBF"/>
+</div>
+</header>
+<!-- Top Navigation Links (Desktop) -->
+<div class="hidden md:flex justify-between items-center w-full px-container-padding h-12 bg-surface-container dark:bg-surface-container border-b border-outline-variant z-10 sticky top-0">
+<div class="font-label-caps text-label-caps text-secondary uppercase tracking-widest font-extrabold flex items-center gap-4">
+                STATUSDOT MINI
+            </div>
+<div class="flex items-center gap-6 h-full font-headline-sm text-headline-sm">
+<a class="h-full flex items-center text-primary border-b-2 border-secondary pb-1 cursor-pointer active:opacity-80" href="#">Dashboard</a>
+<a class="h-full flex items-center text-on-surface-variant hover:bg-surface-bright transition-colors px-2 cursor-pointer active:opacity-80" href="#">Analytics</a>
+<a class="h-full flex items-center text-on-surface-variant hover:bg-surface-bright transition-colors px-2 cursor-pointer active:opacity-80" href="#">Logs</a>
+</div>
+<div class="flex items-center gap-3 text-primary dark:text-primary">
+<button class="hover:bg-surface-bright transition-colors p-1 rounded-DEFAULT cursor-pointer active:opacity-80">
+<span class="material-symbols-outlined text-[20px]" data-icon="download">download</span>
+</button>
+<button class="hover:bg-surface-bright transition-colors p-1 rounded-DEFAULT cursor-pointer active:opacity-80">
+<span class="material-symbols-outlined text-[20px]" data-icon="settings">settings</span>
+</button>
+<img alt="User profile" class="w-6 h-6 rounded-full object-cover border border-outline-variant" data-alt="A small, professional user avatar portrait. The image should be closely cropped on a person's face. The lighting is studio quality, soft and professional. The background should be a neutral, dark corporate color like deep slate." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcuLwrRXzmhVZdwYMe_ml3f5qGrC-gkOcD-znXhEK2n33aEMS90jOJsTxehXsqHScBlUVuSnTSdeILBpe14g467Y3Z7HfoFF-gzvzY-Sp0EbGqyJf_8oNlnMPkxR6O0QL3rFk7Qtaby6RbTGEYTbl3izYMo4T6lAndIMowVkpKfTx2gageuNrHIlnouXPnyNn6lLrRlCW67Qtf1LqtrBuJmKScJZDhzCiqbHUVzWeOsy-srDCwTQtBKkHrqC6eulnaU2kDWbfrkCU3"/>
+</div>
+</div>
+<!-- Content Area -->
+<div class="flex-1 overflow-auto custom-scrollbar p-grid-gutter relative">
+<div class="max-w-[1400px] mx-auto flex flex-col gap-grid-gutter h-full">
+<!-- Header & Actions -->
+<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 pb-2">
+<div>
+<h1 class="font-headline-sm text-headline-sm text-on-surface">Operations Overview</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Real-time status monitoring and configuration.</p>
+</div>
+<div class="flex w-full sm:w-auto items-center gap-3">
+<div class="relative flex-1 sm:flex-none">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[16px]">search</span>
+<input class="w-full sm:w-64 bg-surface-container-high border border-outline-variant text-on-surface font-body-sm text-body-sm rounded-DEFAULT py-1.5 pl-9 pr-3 focus:border-secondary focus:ring-1 focus:ring-secondary outline-none placeholder:text-on-surface-variant transition-colors" id="ACT_SEARCH_RECORDS" placeholder="Search dots..." type="text"/>
+</div>
+<button class="bg-surface-variant hover:bg-surface-bright text-on-surface p-1.5 rounded-DEFAULT border border-outline-variant transition-colors" title="Filter">
+<span class="material-symbols-outlined text-[18px]">filter_list</span>
+</button>
+<button class="bg-secondary text-on-secondary px-4 py-1.5 rounded-DEFAULT font-body-sm text-body-sm font-medium hover:bg-secondary-fixed transition-colors whitespace-nowrap flex items-center gap-2" id="ACT_CREATE_RECORD">
+<span class="material-symbols-outlined text-[16px]">add</span>
+                            Create Dot
+                        </button>
+</div>
+</div>
+<!-- Summary Metrics (Bento Grid Style) -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-grid-gutter">
+<!-- Total -->
+<div class="bg-surface-container border border-outline-variant rounded-DEFAULT p-3 flex flex-col justify-between h-24">
+<div class="font-label-caps text-label-caps text-on-surface-variant uppercase">Total Dots</div>
+<div class="flex items-end justify-between">
+<div class="font-mono-data text-[24px] text-on-surface font-bold leading-none">03</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">data_object</span>
+</div>
+</div>
+<!-- Ready -->
+<div class="bg-surface-container border border-outline-variant rounded-DEFAULT p-3 flex flex-col justify-between h-24">
+<div class="font-label-caps text-label-caps text-on-surface-variant uppercase flex items-center gap-2">
+<div class="w-2.5 h-2.5 rounded-full bg-secondary glow-ready"></div>
+                            Ready
+                        </div>
+<div class="flex items-end justify-between">
+<div class="font-mono-data text-[24px] text-secondary font-bold leading-none">01</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">33.3%</div>
+</div>
+</div>
+<!-- Warn -->
+<div class="bg-surface-container border border-outline-variant rounded-DEFAULT p-3 flex flex-col justify-between h-24">
+<div class="font-label-caps text-label-caps text-on-surface-variant uppercase flex items-center gap-2">
+<div class="w-2.5 h-2.5 rounded-full bg-[#f59e0b] pulse-warn"></div>
+                            Warning
+                        </div>
+<div class="flex items-end justify-between">
+<div class="font-mono-data text-[24px] text-[#f59e0b] font-bold leading-none">01</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">33.3%</div>
+</div>
+</div>
+<!-- Fail -->
+<div class="bg-surface-container border border-outline-variant border-l-2 border-l-error rounded-DEFAULT p-3 flex flex-col justify-between h-24">
+<div class="font-label-caps text-label-caps text-on-surface-variant uppercase flex items-center gap-2">
+<div class="w-2.5 h-2.5 rounded-full bg-error ring-fail"></div>
+                            Critical
+                        </div>
+<div class="flex items-end justify-between">
+<div class="font-mono-data text-[24px] text-error font-bold leading-none">01</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">33.3%</div>
+</div>
+</div>
+</div>
+<!-- Main Layout Area: Table + Preview -->
+<div class="flex flex-col lg:flex-row gap-grid-gutter flex-1 min-h-0">
+<!-- Table Section -->
+<div class="flex-1 bg-surface-container border border-outline-variant rounded-DEFAULT flex flex-col min-h-[300px]">
+<div class="p-3 border-b border-outline-variant flex justify-between items-center bg-surface-container-highest rounded-t-DEFAULT">
+<div class="font-label-caps text-label-caps text-on-surface uppercase">Active Monitored Resources</div>
+<button class="text-on-surface-variant hover:text-on-surface transition-colors" id="ACT_RETRY_LOAD">
+<span class="material-symbols-outlined text-[16px]">refresh</span>
+</button>
+</div>
+<div class="overflow-auto custom-scrollbar flex-1">
+<table class="w-full text-left border-collapse">
+<thead class="sticky top-0 bg-surface-container-high z-10 shadow-[0_1px_0_0_#45464d]">
+<tr>
+<th class="py-2 px-3 font-label-caps text-label-caps text-on-surface-variant w-10 text-center">Status</th>
+<th class="py-2 px-3 font-label-caps text-label-caps text-on-surface-variant">Resource Name</th>
+<th class="py-2 px-3 font-label-caps text-label-caps text-on-surface-variant">ID / Endpoint</th>
+<th class="py-2 px-3 font-label-caps text-label-caps text-on-surface-variant text-right">Last Updated</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm text-on-surface">
+<!-- Row 1: Ready -->
+<tr class="h-[32px] border-b border-outline-variant/50 hover:bg-surface-bright cursor-pointer transition-colors bg-surface-bright">
+<td class="py-1 px-3 text-center align-middle">
+<div class="w-2.5 h-2.5 rounded-full bg-secondary glow-ready mx-auto"></div>
+</td>
+<td class="py-1 px-3 font-medium">Gateway Proxy-A</td>
+<td class="py-1 px-3 font-mono-data text-mono-data text-on-surface-variant">eth0::192.168.1.1</td>
+<td class="py-1 px-3 text-right font-mono-data text-mono-data text-on-surface-variant">Just now</td>
+</tr>
+<!-- Row 2: Warn -->
+<tr class="h-[32px] border-b border-outline-variant/50 hover:bg-surface-bright cursor-pointer transition-colors">
+<td class="py-1 px-3 text-center align-middle">
+<div class="w-2.5 h-2.5 rounded-full bg-[#f59e0b] pulse-warn mx-auto"></div>
+</td>
+<td class="py-1 px-3 font-medium">Auth Cluster Cache</td>
+<td class="py-1 px-3 font-mono-data text-mono-data text-on-surface-variant">mem::redis-svc-02</td>
+<td class="py-1 px-3 text-right font-mono-data text-mono-data text-on-surface-variant">45s ago</td>
+</tr>
+<!-- Row 3: Fail -->
+<tr class="h-[32px] border-b border-outline-variant/50 hover:bg-surface-bright cursor-pointer transition-colors">
+<td class="py-1 px-3 text-center align-middle">
+<div class="w-2.5 h-2.5 rounded-full bg-error ring-fail mx-auto"></div>
+</td>
+<td class="py-1 px-3 font-medium">Payment Gateway API</td>
+<td class="py-1 px-3 font-mono-data text-mono-data text-on-surface-variant">ext::stripe-hook</td>
+<td class="py-1 px-3 text-right font-mono-data text-mono-data text-on-surface-variant">2m 14s ago</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Simulated Data Load Error Banner (Hidden by default, shown for context) -->
+<div class="hidden bg-error-container/20 border-t border-error/50 p-2 flex items-center justify-between">
+<div class="flex items-center gap-2 text-error text-body-sm font-body-sm">
+<span class="material-symbols-outlined text-[16px]">error</span>
+                                Connection lost to telemetry server.
+                            </div>
+<button class="text-body-sm font-body-sm text-error underline hover:text-on-error-container">Retry</button>
+</div>
+</div>
+<!-- Preview Panel (Side) -->
+<div class="w-full lg:w-80 bg-surface-container border border-outline-variant rounded-DEFAULT flex flex-col">
+<div class="p-3 border-b border-outline-variant bg-surface-container-highest rounded-t-DEFAULT flex justify-between items-center">
+<div class="font-label-caps text-label-caps text-on-surface uppercase">Resource Details</div>
+<button class="text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<div class="p-4 flex flex-col gap-4 overflow-auto custom-scrollbar">
+<!-- Selected Header -->
+<div class="flex items-start gap-3">
+<div class="mt-1 w-3 h-3 rounded-full bg-secondary glow-ready shrink-0"></div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface leading-tight">Gateway Proxy-A</h2>
+<div class="font-mono-data text-mono-data text-on-surface-variant mt-1">eth0::192.168.1.1</div>
+</div>
+</div>
+<!-- Tiny Chart Area (Visual placeholder) -->
+<div class="h-24 w-full bg-surface-dim border border-outline-variant rounded-DEFAULT relative overflow-hidden">
+<div class="absolute inset-0 flex items-end justify-between px-1 pb-1 opacity-50">
+<div class="w-[8%] bg-secondary h-[40%]"></div>
+<div class="w-[8%] bg-secondary h-[45%]"></div>
+<div class="w-[8%] bg-secondary h-[35%]"></div>
+<div class="w-[8%] bg-secondary h-[60%]"></div>
+<div class="w-[8%] bg-secondary h-[55%]"></div>
+<div class="w-[8%] bg-secondary h-[70%]"></div>
+<div class="w-[8%] bg-secondary h-[65%]"></div>
+<div class="w-[8%] bg-secondary h-[80%]"></div>
+<div class="w-[8%] bg-secondary h-[75%]"></div>
+<div class="w-[8%] bg-secondary h-[90%]"></div>
+</div>
+<div class="absolute top-1 left-2 font-label-caps text-label-caps text-on-surface-variant text-[8px]">Latency (ms)</div>
+</div>
+<!-- Properties Grid -->
+<div class="grid grid-cols-1 gap-2">
+<div class="flex justify-between items-center py-1 border-b border-outline-variant/30">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Uptime</span>
+<span class="font-mono-data text-mono-data text-on-surface">99.99%</span>
+</div>
+<div class="flex justify-between items-center py-1 border-b border-outline-variant/30">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Region</span>
+<span class="font-mono-data text-mono-data text-on-surface">us-east-1</span>
+</div>
+<div class="flex justify-between items-center py-1 border-b border-outline-variant/30">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Throughput</span>
+<span class="font-mono-data text-mono-data text-on-surface">1.2 GB/s</span>
+</div>
+</div>
+<!-- Quick Actions -->
+<div class="mt-2 flex gap-2">
+<button class="flex-1 bg-surface-variant hover:bg-surface-bright text-on-surface py-1.5 rounded-DEFAULT border border-outline-variant font-body-sm text-body-sm transition-colors text-center">
+                                    Logs
+                                </button>
+<button class="flex-1 bg-surface-variant hover:bg-surface-bright text-on-surface py-1.5 rounded-DEFAULT border border-outline-variant font-body-sm text-body-sm transition-colors text-center">
+                                    Config
+                                </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

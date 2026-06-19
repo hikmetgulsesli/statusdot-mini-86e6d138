@@ -1,0 +1,1449 @@
+{
+  "generatedAt": "2026-06-19T07:00:30.534Z",
+  "screenCount": 3,
+  "screens": {
+    "56fa0db4a9884ffbaaf097148a56dee6": {
+      "screenId": "56fa0db4a9884ffbaaf097148a56dee6",
+      "materialSymbolsRequired": true,
+      "sections": [],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "Go back",
+          "classes": [
+            "text-on-surface-variant",
+            "hover:text-on-surface",
+            "transition-colors",
+            "flex",
+            "items-center",
+            "justify-center",
+            "h-8",
+            "w-8",
+            "rounded-DEFAULT",
+            "bg-surface-container-highest",
+            "border",
+            "border-outline-variant"
+          ],
+          "icon": "arrow_back",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Cancel",
+          "classes": [
+            "px-4",
+            "py-2",
+            "rounded-DEFAULT",
+            "font-body-md",
+            "text-body-md",
+            "font-medium",
+            "text-on-surface-variant",
+            "hover:text-on-surface",
+            "hover:bg-surface-container-high",
+            "transition-colors",
+            "border",
+            "border-transparent"
+          ],
+          "icon": null,
+          "action": "dismiss",
+          "expectedBehavior": "close dialog/panel or return to previous state"
+        },
+        {
+          "kind": "button",
+          "label": "Changes",
+          "classes": [
+            "px-5",
+            "py-2",
+            "rounded-DEFAULT",
+            "font-body-md",
+            "text-body-md",
+            "font-medium",
+            "bg-secondary-container",
+            "text-on-secondary-container",
+            "hover:bg-secondary",
+            "hover:text-on-secondary",
+            "transition-colors",
+            "flex",
+            "items-center",
+            "gap-2",
+            "border",
+            "border-transparent"
+          ],
+          "icon": "save",
+          "action": "form-submit",
+          "expectedBehavior": "validate inputs and submit/apply changes"
+        }
+      ],
+      "inputs": [
+        {
+          "kind": "input",
+          "type": "text",
+          "label": "e.g. Database Cluster Alpha",
+          "placeholder": "e.g. Database Cluster Alpha",
+          "name": "dot-name",
+          "classes": [
+            "w-full",
+            "bg-surface-dim",
+            "border",
+            "border-error",
+            "text-on-surface",
+            "font-mono-data",
+            "text-mono-data",
+            "px-3",
+            "py-2.5",
+            "rounded-DEFAULT",
+            "focus:outline-none",
+            "focus:ring-1",
+            "focus:ring-error",
+            "transition-colors",
+            "placeholder:text-on-surface-variant/50"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "type": "textarea",
+          "label": "Context or specific routing details...",
+          "placeholder": "Context or specific routing details...",
+          "name": "dot-desc",
+          "classes": [
+            "w-full",
+            "bg-surface-dim",
+            "border",
+            "border-outline-variant",
+            "text-on-surface",
+            "font-body-md",
+            "text-body-md",
+            "px-3",
+            "py-2.5",
+            "rounded-DEFAULT",
+            "focus:outline-none",
+            "focus:border-secondary",
+            "focus:ring-1",
+            "focus:ring-secondary",
+            "transition-colors",
+            "placeholder:text-on-surface-variant/50",
+            "resize-none"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "type": "radio",
+          "label": "status-select",
+          "placeholder": "",
+          "name": "status-select",
+          "classes": [
+            "peer",
+            "sr-only"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "navLinks": [],
+      "cards": [],
+      "icons": [
+        "arrow_back",
+        "edit_note",
+        "error",
+        "save"
+      ],
+      "images": [],
+      "cssVars": {},
+      "colorPalette": {
+        "error-container": "#93000a",
+        "on-background": "#d3e4fe",
+        "on-tertiary-fixed": "#2a1700",
+        "secondary": "#4edea3",
+        "error": "#ffb4ab",
+        "on-tertiary-container": "#b47300",
+        "surface-container": "#102034",
+        "on-primary-fixed-variant": "#3f465c",
+        "tertiary-fixed-dim": "#ffb95f",
+        "surface-container-highest": "#26364a",
+        "on-surface-variant": "#c6c6cd",
+        "primary-fixed-dim": "#bec6e0",
+        "on-primary-container": "#798098",
+        "on-error-container": "#ffdad6",
+        "surface-bright": "#2a3a4f",
+        "primary-fixed": "#dae2fd",
+        "outline": "#909097",
+        "surface-dim": "#031427",
+        "on-secondary": "#003824",
+        "on-secondary-container": "#00311f",
+        "tertiary-container": "#251400",
+        "tertiary-fixed": "#ffddb8",
+        "tertiary": "#ffb95f",
+        "surface": "#031427",
+        "inverse-on-surface": "#213145",
+        "surface-container-low": "#0b1c30",
+        "on-secondary-fixed": "#002113",
+        "secondary-fixed-dim": "#4edea3",
+        "on-surface": "#d3e4fe",
+        "background": "#031427",
+        "inverse-primary": "#565e74",
+        "secondary-container": "#00a572",
+        "primary": "#bec6e0",
+        "on-primary-fixed": "#131b2e",
+        "secondary-fixed": "#6ffbbe",
+        "on-tertiary": "#472a00",
+        "surface-variant": "#26364a",
+        "on-tertiary-fixed-variant": "#653e00",
+        "surface-tint": "#bec6e0",
+        "on-primary": "#283044",
+        "inverse-surface": "#d3e4fe",
+        "outline-variant": "#45464d",
+        "primary-container": "#0f172a",
+        "surface-container-high": "#1b2b3f",
+        "on-error": "#690005",
+        "surface-container-lowest": "#000f21",
+        "on-secondary-fixed-variant": "#005236"
+      },
+      "fonts": [
+        "Inter",
+        "JetBrains Mono",
+        "Material Symbols Outlined"
+      ],
+      "layoutHints": {
+        "gridCols": 1,
+        "flexDirection": "col",
+        "gap": "4"
+      },
+      "behaviorContract": [
+        {
+          "kind": "button",
+          "label": "Go back",
+          "icon": "arrow_back",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Cancel",
+          "icon": null,
+          "action": "dismiss",
+          "expectedBehavior": "close dialog/panel or return to previous state"
+        },
+        {
+          "kind": "button",
+          "label": "Changes",
+          "icon": "save",
+          "action": "form-submit",
+          "expectedBehavior": "validate inputs and submit/apply changes"
+        },
+        {
+          "kind": "input",
+          "label": "e.g. Database Cluster Alpha",
+          "type": "text",
+          "placeholder": "e.g. Database Cluster Alpha",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "label": "Context or specific routing details...",
+          "type": "textarea",
+          "placeholder": "Context or specific routing details...",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        },
+        {
+          "kind": "input",
+          "label": "status-select",
+          "type": "radio",
+          "placeholder": "",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "tabBar": [],
+      "title": "Three Editor - StatusDot Mini"
+    },
+    "b14bb19b72124cf0bd08e58fd5dde7c9": {
+      "screenId": "b14bb19b72124cf0bd08e58fd5dde7c9",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "nav",
+          "layout": "flex-col",
+          "classes": [
+            "hidden",
+            "md:flex",
+            "flex-col",
+            "py-4",
+            "px-2",
+            "gap-stack-tight",
+            "bg-surface-container-low",
+            "dark:bg-surface-container-low",
+            "border-r",
+            "border-outline-variant"
+          ],
+          "childCount": 6
+        },
+        {
+          "tag": "main",
+          "layout": "flex-col",
+          "classes": [
+            "flex-1",
+            "flex",
+            "flex-col",
+            "md:ml-64",
+            "h-screen",
+            "bg-background"
+          ],
+          "childCount": 75
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "Force",
+          "classes": [
+            "w-full",
+            "py-2",
+            "px-4",
+            "bg-surface-variant",
+            "text-on-surface",
+            "hover:bg-surface-bright",
+            "rounded-DEFAULT",
+            "transition-colors",
+            "font-body-sm",
+            "text-body-sm",
+            "flex",
+            "items-center",
+            "justify-center",
+            "gap-2"
+          ],
+          "icon": "sync",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "download",
+          "classes": [
+            "hover:bg-surface-bright",
+            "transition-colors",
+            "p-1",
+            "rounded-DEFAULT",
+            "cursor-pointer",
+            "active:opacity-80"
+          ],
+          "icon": "download",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "settings",
+          "classes": [
+            "hover:bg-surface-bright",
+            "transition-colors",
+            "p-1",
+            "rounded-DEFAULT",
+            "cursor-pointer",
+            "active:opacity-80"
+          ],
+          "icon": "settings",
+          "action": "navigate",
+          "expectedBehavior": "navigate:/settings",
+          "expectedRoute": "/settings",
+          "routeInferred": true
+        },
+        {
+          "kind": "button",
+          "label": "Filter",
+          "classes": [
+            "bg-surface-variant",
+            "hover:bg-surface-bright",
+            "text-on-surface",
+            "p-1.5",
+            "rounded-DEFAULT",
+            "border",
+            "border-outline-variant",
+            "transition-colors"
+          ],
+          "icon": "filter_list",
+          "action": "search",
+          "expectedBehavior": "filter/search visible results from input/query"
+        },
+        {
+          "kind": "button",
+          "label": "Create Dot",
+          "classes": [
+            "bg-secondary",
+            "text-on-secondary",
+            "px-4",
+            "py-1.5",
+            "rounded-DEFAULT",
+            "font-body-sm",
+            "text-body-sm",
+            "font-medium",
+            "hover:bg-secondary-fixed",
+            "transition-colors",
+            "whitespace-nowrap",
+            "flex",
+            "items-center",
+            "gap-2"
+          ],
+          "icon": "add",
+          "action": "create",
+          "expectedBehavior": "open create flow or add a new item/state"
+        },
+        {
+          "kind": "button",
+          "label": "ACT_RETRY_LOAD",
+          "classes": [
+            "text-on-surface-variant",
+            "hover:text-on-surface",
+            "transition-colors"
+          ],
+          "icon": "refresh",
+          "action": "retry",
+          "expectedBehavior": "retry the failed action and show loading/error feedback"
+        },
+        {
+          "kind": "button",
+          "label": "Retry",
+          "classes": [
+            "text-body-sm",
+            "font-body-sm",
+            "text-error",
+            "underline",
+            "hover:text-on-error-container"
+          ],
+          "icon": null,
+          "action": "retry",
+          "expectedBehavior": "retry the failed action and show loading/error feedback"
+        },
+        {
+          "kind": "button",
+          "label": "close",
+          "classes": [
+            "text-on-surface-variant",
+            "hover:text-on-surface",
+            "transition-colors"
+          ],
+          "icon": "close",
+          "action": "dismiss",
+          "expectedBehavior": "close dialog/panel or return to previous state"
+        },
+        {
+          "kind": "button",
+          "label": "Logs",
+          "classes": [
+            "flex-1",
+            "bg-surface-variant",
+            "hover:bg-surface-bright",
+            "text-on-surface",
+            "py-1.5",
+            "rounded-DEFAULT",
+            "border",
+            "border-outline-variant",
+            "font-body-sm",
+            "text-body-sm",
+            "transition-colors",
+            "text-center"
+          ],
+          "icon": null,
+          "action": "navigate",
+          "expectedBehavior": "navigate:/history",
+          "expectedRoute": "/history",
+          "routeInferred": true
+        },
+        {
+          "kind": "button",
+          "label": "Config",
+          "classes": [
+            "flex-1",
+            "bg-surface-variant",
+            "hover:bg-surface-bright",
+            "text-on-surface",
+            "py-1.5",
+            "rounded-DEFAULT",
+            "border",
+            "border-outline-variant",
+            "font-body-sm",
+            "text-body-sm",
+            "transition-colors",
+            "text-center"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "SDM-Utility",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "v1.0.4-stable",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "inputs": [
+        {
+          "kind": "input",
+          "type": "text",
+          "label": "Search dots...",
+          "placeholder": "Search dots...",
+          "name": "ACT_SEARCH_RECORDS",
+          "classes": [
+            "w-full",
+            "sm:w-64",
+            "bg-surface-container-high",
+            "border",
+            "border-outline-variant",
+            "text-on-surface",
+            "font-body-sm",
+            "text-body-sm",
+            "rounded-DEFAULT",
+            "py-1.5",
+            "pl-9",
+            "pr-3",
+            "focus:border-secondary",
+            "focus:ring-1",
+            "focus:ring-secondary",
+            "outline-none",
+            "placeholder:text-on-surface-variant",
+            "transition-colors"
+          ],
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "navLinks": [
+        {
+          "kind": "link",
+          "label": "Overview",
+          "href": "#",
+          "classes": [
+            "font-body-md",
+            "text-body-md",
+            "font-medium"
+          ],
+          "icon": "grid_view",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "System",
+          "href": "#",
+          "classes": [
+            "font-body-md",
+            "text-body-md"
+          ],
+          "icon": "memory",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Network",
+          "href": "#",
+          "classes": [
+            "font-body-md",
+            "text-body-md"
+          ],
+          "icon": "lan",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Export",
+          "href": "#",
+          "classes": [
+            "font-body-md",
+            "text-body-md"
+          ],
+          "icon": "ios_share",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Dashboard",
+          "href": "#",
+          "classes": [
+            "h-full",
+            "flex",
+            "items-center",
+            "text-primary",
+            "border-b-2",
+            "border-secondary",
+            "pb-1",
+            "cursor-pointer",
+            "active:opacity-80"
+          ],
+          "icon": null,
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Analytics",
+          "href": "#",
+          "classes": [
+            "h-full",
+            "flex",
+            "items-center",
+            "text-on-surface-variant",
+            "hover:bg-surface-bright",
+            "transition-colors",
+            "px-2",
+            "cursor-pointer",
+            "active:opacity-80"
+          ],
+          "icon": null,
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "href": "#",
+          "classes": [
+            "h-full",
+            "flex",
+            "items-center",
+            "text-on-surface-variant",
+            "hover:bg-surface-bright",
+            "transition-colors",
+            "px-2",
+            "cursor-pointer",
+            "active:opacity-80"
+          ],
+          "icon": null,
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        }
+      ],
+      "cards": [],
+      "icons": [
+        "grid_view",
+        "memory",
+        "lan",
+        "ios_share",
+        "sync",
+        "download",
+        "settings",
+        "search",
+        "filter_list",
+        "add",
+        "data_object",
+        "refresh",
+        "error",
+        "close"
+      ],
+      "images": [
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuA7zkSY4Ael22oVBRbi_RM6R3lpYZ1L1XkBCsvxGNpsJKBdn4dxN-xkdP5Ft8kbg_KPgSw2JO04UMBZBVOQshNT1TgQNeW67K6M7K3DCYnGDFqwZlDSjbQ_28qK6L7CO437rdIUYNBPOI5Q7uhkR9",
+          "alt": "System Status"
+        },
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDdIqTNCdL1Srr-pDJyadNPYkVS6mMpVL2Dg6QGklSBVe11oibSh_XNMSkA6OKVwdH55LrxhC1frXocqA4UtwkoH-euVYCp-sDgO6kUkvaxnpp6erG0hri8Y65sJKMRrW4B82jN5j0nhUnzTUVdVt",
+          "alt": "User profile"
+        },
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuBcuLwrRXzmhVZdwYMe_ml3f5qGrC-gkOcD-znXhEK2n33aEMS90jOJsTxehXsqHScBlUVuSnTSdeILBpe14g467Y3Z7HfoFF-gzvzY-Sp0EbGqyJf_8oNlnMPkxR6O0QL3rFk7Qtaby6RbTGEYTb",
+          "alt": "User profile"
+        }
+      ],
+      "cssVars": {},
+      "colorPalette": {
+        "error-container": "#93000a",
+        "on-background": "#d3e4fe",
+        "on-tertiary-fixed": "#2a1700",
+        "secondary": "#4edea3",
+        "error": "#ffb4ab",
+        "on-tertiary-container": "#b47300",
+        "surface-container": "#102034",
+        "on-primary-fixed-variant": "#3f465c",
+        "tertiary-fixed-dim": "#ffb95f",
+        "surface-container-highest": "#26364a",
+        "on-surface-variant": "#c6c6cd",
+        "primary-fixed-dim": "#bec6e0",
+        "on-primary-container": "#798098",
+        "on-error-container": "#ffdad6",
+        "surface-bright": "#2a3a4f",
+        "primary-fixed": "#dae2fd",
+        "outline": "#909097",
+        "surface-dim": "#031427",
+        "on-secondary": "#003824",
+        "on-secondary-container": "#00311f",
+        "tertiary-container": "#251400",
+        "tertiary-fixed": "#ffddb8",
+        "tertiary": "#ffb95f",
+        "surface": "#031427",
+        "inverse-on-surface": "#213145",
+        "surface-container-low": "#0b1c30",
+        "on-secondary-fixed": "#002113",
+        "secondary-fixed-dim": "#4edea3",
+        "on-surface": "#d3e4fe",
+        "background": "#031427",
+        "inverse-primary": "#565e74",
+        "secondary-container": "#00a572",
+        "primary": "#bec6e0",
+        "on-primary-fixed": "#131b2e",
+        "secondary-fixed": "#6ffbbe",
+        "on-tertiary": "#472a00",
+        "surface-variant": "#26364a",
+        "on-tertiary-fixed-variant": "#653e00",
+        "surface-tint": "#bec6e0",
+        "on-primary": "#283044",
+        "inverse-surface": "#d3e4fe",
+        "outline-variant": "#45464d",
+        "primary-container": "#0f172a",
+        "surface-container-high": "#1b2b3f",
+        "on-error": "#690005",
+        "surface-container-lowest": "#000f21",
+        "on-secondary-fixed-variant": "#005236"
+      },
+      "fonts": [
+        "Material Symbols Outlined",
+        "Inter",
+        "JetBrains Mono"
+      ],
+      "layoutHints": {
+        "gridCols": 2,
+        "flexDirection": "col",
+        "gap": "3"
+      },
+      "behaviorContract": [
+        {
+          "kind": "link",
+          "label": "Overview",
+          "icon": "grid_view",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "System",
+          "icon": "memory",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Network",
+          "icon": "lan",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Export",
+          "icon": "ios_share",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Dashboard",
+          "icon": null,
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Analytics",
+          "icon": null,
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "icon": null,
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "button",
+          "label": "Force",
+          "icon": "sync",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "download",
+          "icon": "download",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "settings",
+          "icon": "settings",
+          "action": "navigate",
+          "route": "/settings",
+          "expectedBehavior": "navigate:/settings"
+        },
+        {
+          "kind": "button",
+          "label": "Filter",
+          "icon": "filter_list",
+          "action": "search",
+          "expectedBehavior": "filter/search visible results from input/query"
+        },
+        {
+          "kind": "button",
+          "label": "Create Dot",
+          "icon": "add",
+          "action": "create",
+          "expectedBehavior": "open create flow or add a new item/state"
+        },
+        {
+          "kind": "button",
+          "label": "ACT_RETRY_LOAD",
+          "icon": "refresh",
+          "action": "retry",
+          "expectedBehavior": "retry the failed action and show loading/error feedback"
+        },
+        {
+          "kind": "button",
+          "label": "Retry",
+          "icon": null,
+          "action": "retry",
+          "expectedBehavior": "retry the failed action and show loading/error feedback"
+        },
+        {
+          "kind": "button",
+          "label": "close",
+          "icon": "close",
+          "action": "dismiss",
+          "expectedBehavior": "close dialog/panel or return to previous state"
+        },
+        {
+          "kind": "button",
+          "label": "Logs",
+          "icon": null,
+          "action": "navigate",
+          "route": "/history",
+          "expectedBehavior": "navigate:/history"
+        },
+        {
+          "kind": "button",
+          "label": "Config",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "SDM-Utility",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "v1.0.4-stable",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "input",
+          "label": "Search dots...",
+          "type": "text",
+          "placeholder": "Search dots...",
+          "expectedBehavior": "controlled value with onChange; validation if required by PRD"
+        }
+      ],
+      "tabBar": [
+        {
+          "kind": "button",
+          "label": "SDM-Utility",
+          "icon": null,
+          "active": false
+        },
+        {
+          "kind": "button",
+          "label": "v1.0.4-stable",
+          "icon": null,
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Overview",
+          "icon": "grid_view",
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "System",
+          "icon": "memory",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Network",
+          "icon": "lan",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Export",
+          "icon": "ios_share",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "button",
+          "label": "Force",
+          "icon": "sync",
+          "active": false
+        }
+      ],
+      "title": "Three Operations - StatusDot Mini"
+    },
+    "d992c14e4b6a4bdebbc2b566f7daebb9": {
+      "screenId": "d992c14e4b6a4bdebbc2b566f7daebb9",
+      "materialSymbolsRequired": true,
+      "sections": [
+        {
+          "tag": "nav",
+          "layout": "absolute",
+          "classes": [
+            "hidden",
+            "md:flex",
+            "h-full",
+            "w-64",
+            "fixed",
+            "left-0",
+            "top-0",
+            "bg-surface-container-low",
+            "dark:bg-surface-container-low",
+            "border-r"
+          ],
+          "childCount": 3
+        },
+        {
+          "tag": "main",
+          "layout": "flex-col",
+          "classes": [
+            "flex-1",
+            "md:ml-64",
+            "flex",
+            "flex-col",
+            "min-h-screen"
+          ],
+          "childCount": 85
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "Force Sync",
+          "classes": [
+            "w-full",
+            "py-2",
+            "px-4",
+            "bg-surface-variant",
+            "hover:bg-surface-bright",
+            "text-on-surface",
+            "rounded",
+            "font-label-caps",
+            "text-label-caps",
+            "uppercase",
+            "transition-colors",
+            "border",
+            "border-outline-variant"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "menu",
+          "classes": [
+            "md:hidden",
+            "text-on-surface-variant",
+            "hover:text-on-surface"
+          ],
+          "icon": "menu",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "download",
+          "classes": [
+            "text-on-surface-variant",
+            "hover:text-on-surface",
+            "transition-colors",
+            "cursor-pointer",
+            "active:opacity-80"
+          ],
+          "icon": "download",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "settings",
+          "classes": [
+            "text-on-surface-variant",
+            "hover:text-on-surface",
+            "transition-colors",
+            "cursor-pointer",
+            "active:opacity-80"
+          ],
+          "icon": "settings",
+          "action": "navigate",
+          "expectedBehavior": "navigate:/settings",
+          "expectedRoute": "/settings",
+          "routeInferred": true
+        },
+        {
+          "kind": "button",
+          "label": "Filter Insights",
+          "classes": [
+            "flex",
+            "items-center",
+            "gap-2",
+            "px-3",
+            "py-1.5",
+            "bg-surface-variant",
+            "hover:bg-surface-bright",
+            "border",
+            "border-outline-variant",
+            "rounded",
+            "text-on-surface",
+            "font-mono-data",
+            "text-mono-data",
+            "transition-colors"
+          ],
+          "icon": "filter_list",
+          "action": "search",
+          "expectedBehavior": "filter/search visible results from input/query"
+        },
+        {
+          "kind": "button",
+          "label": "Export JSON",
+          "classes": [
+            "flex",
+            "items-center",
+            "gap-2",
+            "px-3",
+            "py-1.5",
+            "bg-secondary-container",
+            "hover:bg-[#00b57d]",
+            "text-on-secondary-container",
+            "rounded",
+            "font-mono-data",
+            "text-mono-data",
+            "transition-colors"
+          ],
+          "icon": "data_object",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "SDM-Utility v1.0.4-stable",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "inputs": [],
+      "navLinks": [
+        {
+          "kind": "link",
+          "label": "Overview",
+          "href": "#",
+          "classes": [
+            "font-body-md",
+            "text-body-md"
+          ],
+          "icon": "grid_view",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "System",
+          "href": "#",
+          "classes": [
+            "font-body-md",
+            "text-body-md"
+          ],
+          "icon": "memory",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Network",
+          "href": "#",
+          "classes": [
+            "font-body-md",
+            "text-body-md"
+          ],
+          "icon": "lan",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "analytics",
+          "href": "#",
+          "classes": [
+            "font-body-md",
+            "text-body-md"
+          ],
+          "icon": "analytics",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Export",
+          "href": "#",
+          "classes": [
+            "font-body-md",
+            "text-body-md"
+          ],
+          "icon": "ios_share",
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Dashboard",
+          "href": "#",
+          "classes": [
+            "text-on-surface-variant",
+            "hover:bg-surface-bright",
+            "transition-colors",
+            "h-full",
+            "flex",
+            "items-center",
+            "px-2",
+            "cursor-pointer",
+            "active:opacity-80"
+          ],
+          "icon": null,
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Analytics",
+          "href": "#",
+          "classes": [
+            "text-primary",
+            "border-b-2",
+            "border-secondary",
+            "pb-1",
+            "h-full",
+            "flex",
+            "items-center",
+            "px-2",
+            "cursor-pointer",
+            "active:opacity-80",
+            "font-headline-sm",
+            "text-headline-sm"
+          ],
+          "icon": null,
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "href": "#",
+          "classes": [
+            "text-on-surface-variant",
+            "hover:bg-surface-bright",
+            "transition-colors",
+            "h-full",
+            "flex",
+            "items-center",
+            "px-2",
+            "cursor-pointer",
+            "active:opacity-80"
+          ],
+          "icon": null,
+          "action": "navigate",
+          "expectedBehavior": "navigate:#"
+        }
+      ],
+      "cards": [],
+      "icons": [
+        "grid_view",
+        "memory",
+        "lan",
+        "analytics",
+        "ios_share",
+        "menu",
+        "download",
+        "settings",
+        "filter_list",
+        "data_object",
+        "lightbulb"
+      ],
+      "images": [
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuAODciUQV7Kg5bEHr8nRHvXMHbrStZjuUSbf9sXsUYvnB-YMKjvTCF23aJ1lsnH250jqO6mqE9gASiqZlglkPZxEMdO6bxjmk_WQJw7BwDsUjStCE6Jk0D_8QEo7IjM0m7QA6xDQ_oIFq1Fg5LC-_",
+          "alt": "User profile"
+        }
+      ],
+      "cssVars": {},
+      "colorPalette": {
+        "error-container": "#93000a",
+        "on-background": "#d3e4fe",
+        "on-tertiary-fixed": "#2a1700",
+        "secondary": "#4edea3",
+        "error": "#ffb4ab",
+        "on-tertiary-container": "#b47300",
+        "surface-container": "#102034",
+        "on-primary-fixed-variant": "#3f465c",
+        "tertiary-fixed-dim": "#ffb95f",
+        "surface-container-highest": "#26364a",
+        "on-surface-variant": "#c6c6cd",
+        "primary-fixed-dim": "#bec6e0",
+        "on-primary-container": "#798098",
+        "on-error-container": "#ffdad6",
+        "surface-bright": "#2a3a4f",
+        "primary-fixed": "#dae2fd",
+        "outline": "#909097",
+        "surface-dim": "#031427",
+        "on-secondary": "#003824",
+        "on-secondary-container": "#00311f",
+        "tertiary-container": "#251400",
+        "tertiary-fixed": "#ffddb8",
+        "tertiary": "#ffb95f",
+        "surface": "#031427",
+        "inverse-on-surface": "#213145",
+        "surface-container-low": "#0b1c30",
+        "on-secondary-fixed": "#002113",
+        "secondary-fixed-dim": "#4edea3",
+        "on-surface": "#d3e4fe",
+        "background": "#031427",
+        "inverse-primary": "#565e74",
+        "secondary-container": "#00a572",
+        "primary": "#bec6e0",
+        "on-primary-fixed": "#131b2e",
+        "secondary-fixed": "#6ffbbe",
+        "on-tertiary": "#472a00",
+        "surface-variant": "#26364a",
+        "on-tertiary-fixed-variant": "#653e00",
+        "surface-tint": "#bec6e0",
+        "on-primary": "#283044",
+        "inverse-surface": "#d3e4fe",
+        "outline-variant": "#45464d",
+        "primary-container": "#0f172a",
+        "surface-container-high": "#1b2b3f",
+        "on-error": "#690005",
+        "surface-container-lowest": "#000f21",
+        "on-secondary-fixed-variant": "#005236"
+      },
+      "fonts": [
+        "Inter",
+        "JetBrains Mono",
+        "Material Symbols Outlined"
+      ],
+      "layoutHints": {
+        "gridCols": 1,
+        "flexDirection": "col",
+        "gap": "1"
+      },
+      "behaviorContract": [
+        {
+          "kind": "link",
+          "label": "Overview",
+          "icon": "grid_view",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "System",
+          "icon": "memory",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Network",
+          "icon": "lan",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "analytics",
+          "icon": "analytics",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Export",
+          "icon": "ios_share",
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Dashboard",
+          "icon": null,
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Analytics",
+          "icon": null,
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "icon": null,
+          "route": "#",
+          "expectedBehavior": "navigate:#"
+        },
+        {
+          "kind": "button",
+          "label": "Force Sync",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "menu",
+          "icon": "menu",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "download",
+          "icon": "download",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "settings",
+          "icon": "settings",
+          "action": "navigate",
+          "route": "/settings",
+          "expectedBehavior": "navigate:/settings"
+        },
+        {
+          "kind": "button",
+          "label": "Filter Insights",
+          "icon": "filter_list",
+          "action": "search",
+          "expectedBehavior": "filter/search visible results from input/query"
+        },
+        {
+          "kind": "button",
+          "label": "Export JSON",
+          "icon": "data_object",
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "SDM-Utility v1.0.4-stable",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "tabBar": [
+        {
+          "kind": "button",
+          "label": "SDM-Utility v1.0.4-stable",
+          "icon": null,
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Overview",
+          "icon": "grid_view",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "System",
+          "icon": "memory",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Network",
+          "icon": "lan",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "analytics",
+          "icon": "analytics",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Export",
+          "icon": "ios_share",
+          "route": "#",
+          "active": false
+        },
+        {
+          "kind": "button",
+          "label": "Force Sync",
+          "icon": null,
+          "active": false
+        },
+        {
+          "kind": "link",
+          "label": "Dashboard",
+          "icon": null,
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Analytics",
+          "icon": null,
+          "route": "#",
+          "active": true
+        },
+        {
+          "kind": "link",
+          "label": "Logs",
+          "icon": null,
+          "route": "#",
+          "active": true
+        }
+      ],
+      "title": "Insights - StatusDot Mini"
+    }
+  }
+}

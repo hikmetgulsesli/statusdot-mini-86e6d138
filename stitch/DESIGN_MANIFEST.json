@@ -1,0 +1,35 @@
+[
+  {
+    "screenId": "56fa0db4a9884ffbaaf097148a56dee6",
+    "title": "Three Editor - StatusDot Mini",
+    "htmlFile": "56fa0db4a9884ffbaaf097148a56dee6.html",
+    "deviceType": "DESKTOP",
+    "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2U2Njc2MWFkZDkxOTQ3NjZhODcyOGUxZWVlNjZmMDlkEgsSBxCN19Wi9xcYAZIBJAoKcHJvamVjdF9pZBIWQhQxNzQ3MjkyMjExMTY0OTE2MTkwMw&filename=&opi=96797242",
+    "localHtml": "/Users/setrox/projects/statusdot-mini-86e6d138/stitch/56fa0db4a9884ffbaaf097148a56dee6.html",
+    "surfaceIds": [
+      "SURF_THREE_EDITOR"
+    ]
+  },
+  {
+    "screenId": "b14bb19b72124cf0bd08e58fd5dde7c9",
+    "title": "Three Operations - StatusDot Mini",
+    "htmlFile": "b14bb19b72124cf0bd08e58fd5dde7c9.html",
+    "deviceType": "DESKTOP",
+    "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzg2NGJlNDdiYmEyZTRjYWQ4NWZkNjcyMjQ3YWU4OTA1EgsSBxCN19Wi9xcYAZIBJAoKcHJvamVjdF9pZBIWQhQxNzQ3MjkyMjExMTY0OTE2MTkwMw&filename=&opi=96797242",
+    "localHtml": "/Users/setrox/projects/statusdot-mini-86e6d138/stitch/b14bb19b72124cf0bd08e58fd5dde7c9.html",
+    "surfaceIds": [
+      "SURF_THREE_OPERATIONS"
+    ]
+  },
+  {
+    "screenId": "d992c14e4b6a4bdebbc2b566f7daebb9",
+    "title": "Insights - StatusDot Mini",
+    "htmlFile": "d992c14e4b6a4bdebbc2b566f7daebb9.html",
+    "deviceType": "DESKTOP",
+    "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzVhODg4MjRkZjkwZjQxZThhZmIwYzRhOTg5NDAzY2QzEgsSBxCN19Wi9xcYAZIBJAoKcHJvamVjdF9pZBIWQhQxNzQ3MjkyMjExMTY0OTE2MTkwMw&filename=&opi=96797242",
+    "localHtml": "/Users/setrox/projects/statusdot-mini-86e6d138/stitch/d992c14e4b6a4bdebbc2b566f7daebb9.html",
+    "surfaceIds": [
+      "SURF_INSIGHTS"
+    ]
+  }
+]

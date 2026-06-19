@@ -1,0 +1,29 @@
+[
+  {
+    "screenId": "56fa0db4a9884ffbaaf097148a56dee6",
+    "name": "Three Editor - StatusDot Mini",
+    "type": "form",
+    "description": "Three Editor - StatusDot Mini screen",
+    "surfaceIds": [
+      "SURF_THREE_EDITOR"
+    ]
+  },
+  {
+    "screenId": "b14bb19b72124cf0bd08e58fd5dde7c9",
+    "name": "Three Operations - StatusDot Mini",
+    "type": "app-screen",
+    "description": "Three Operations - StatusDot Mini screen",
+    "surfaceIds": [
+      "SURF_THREE_OPERATIONS"
+    ]
+  },
+  {
+    "screenId": "d992c14e4b6a4bdebbc2b566f7daebb9",
+    "name": "Insights - StatusDot Mini",
+    "type": "app-screen",
+    "description": "Insights - StatusDot Mini screen",
+    "surfaceIds": [
+      "SURF_INSIGHTS"
+    ]
+  }
+]
