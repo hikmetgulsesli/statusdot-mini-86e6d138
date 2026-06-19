@@ -1,0 +1,524 @@
+[
+  {
+    "screenId": "56fa0db4a9884ffbaaf097148a56dee6",
+    "screenTitle": "Three Editor - StatusDot Mini",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "button",
+        "label": "Go back",
+        "line": 121
+      },
+      {
+        "type": "button",
+        "label": "Cancel",
+        "line": 198
+      },
+      {
+        "type": "button",
+        "label": "Changes",
+        "line": 201
+      },
+      {
+        "type": "input",
+        "label": "e.g. Database Cluster Alpha",
+        "inputType": "text",
+        "placeholder": "e.g. Database Cluster Alpha",
+        "line": 149
+      },
+      {
+        "type": "input",
+        "label": "Context or specific routing details...",
+        "inputType": "textarea",
+        "placeholder": "Context or specific routing details...",
+        "line": 155
+      },
+      {
+        "type": "input",
+        "label": "radio",
+        "inputType": "radio",
+        "line": 166
+      },
+      {
+        "type": "input",
+        "label": "radio",
+        "inputType": "radio",
+        "line": 176
+      },
+      {
+        "type": "input",
+        "label": "radio",
+        "inputType": "radio",
+        "line": 186
+      },
+      {
+        "type": "form",
+        "label": "form",
+        "line": 132
+      }
+    ],
+    "navigation": [],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "Go back",
+        "line": 121
+      },
+      {
+        "type": "button",
+        "label": "Cancel",
+        "line": 198
+      },
+      {
+        "type": "button",
+        "label": "Changes",
+        "line": 201
+      }
+    ],
+    "inputs": [
+      {
+        "type": "input",
+        "label": "e.g. Database Cluster Alpha",
+        "inputType": "text",
+        "placeholder": "e.g. Database Cluster Alpha",
+        "line": 149
+      },
+      {
+        "type": "input",
+        "label": "Context or specific routing details...",
+        "inputType": "textarea",
+        "placeholder": "Context or specific routing details...",
+        "line": 155
+      },
+      {
+        "type": "input",
+        "label": "radio",
+        "inputType": "radio",
+        "line": 166
+      },
+      {
+        "type": "input",
+        "label": "radio",
+        "inputType": "radio",
+        "line": 176
+      },
+      {
+        "type": "input",
+        "label": "radio",
+        "inputType": "radio",
+        "line": 186
+      }
+    ],
+    "hardcodedData": [],
+    "totalInteractive": 9,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  },
+  {
+    "screenId": "b14bb19b72124cf0bd08e58fd5dde7c9",
+    "screenTitle": "Three Operations - StatusDot Mini",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "link",
+        "label": "Overview",
+        "href": "#",
+        "line": 183
+      },
+      {
+        "type": "link",
+        "label": "System",
+        "href": "#",
+        "line": 187
+      },
+      {
+        "type": "link",
+        "label": "Network",
+        "href": "#",
+        "line": 191
+      },
+      {
+        "type": "link",
+        "label": "Export",
+        "href": "#",
+        "line": 195
+      },
+      {
+        "type": "link",
+        "label": "Dashboard",
+        "href": "#",
+        "line": 228
+      },
+      {
+        "type": "link",
+        "label": "Analytics",
+        "href": "#",
+        "line": 229
+      },
+      {
+        "type": "link",
+        "label": "Logs",
+        "href": "#",
+        "line": 230
+      },
+      {
+        "type": "button",
+        "label": "Force",
+        "line": 201
+      },
+      {
+        "type": "button",
+        "label": "download",
+        "line": 213
+      },
+      {
+        "type": "button",
+        "label": "settings",
+        "line": 216
+      },
+      {
+        "type": "button",
+        "label": "download",
+        "line": 233
+      },
+      {
+        "type": "button",
+        "label": "settings",
+        "line": 236
+      },
+      {
+        "type": "button",
+        "label": "Filter",
+        "line": 256
+      },
+      {
+        "type": "button",
+        "label": "Create Dot",
+        "line": 259
+      },
+      {
+        "type": "button",
+        "label": "ACT_RETRY_LOAD",
+        "line": 315
+      },
+      {
+        "type": "button",
+        "label": "Retry",
+        "line": 366
+      },
+      {
+        "type": "button",
+        "label": "close",
+        "line": 373
+      },
+      {
+        "type": "button",
+        "label": "Logs",
+        "line": 419
+      },
+      {
+        "type": "button",
+        "label": "Config",
+        "line": 422
+      },
+      {
+        "type": "input",
+        "label": "Search dots...",
+        "inputType": "text",
+        "placeholder": "Search dots...",
+        "line": 254
+      }
+    ],
+    "navigation": [
+      {
+        "type": "link",
+        "label": "Overview",
+        "href": "#",
+        "line": 183
+      },
+      {
+        "type": "link",
+        "label": "System",
+        "href": "#",
+        "line": 187
+      },
+      {
+        "type": "link",
+        "label": "Network",
+        "href": "#",
+        "line": 191
+      },
+      {
+        "type": "link",
+        "label": "Export",
+        "href": "#",
+        "line": 195
+      },
+      {
+        "type": "link",
+        "label": "Dashboard",
+        "href": "#",
+        "line": 228
+      },
+      {
+        "type": "link",
+        "label": "Analytics",
+        "href": "#",
+        "line": 229
+      },
+      {
+        "type": "link",
+        "label": "Logs",
+        "href": "#",
+        "line": 230
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "Force",
+        "line": 201
+      },
+      {
+        "type": "button",
+        "label": "download",
+        "line": 213
+      },
+      {
+        "type": "button",
+        "label": "settings",
+        "line": 216
+      },
+      {
+        "type": "button",
+        "label": "download",
+        "line": 233
+      },
+      {
+        "type": "button",
+        "label": "settings",
+        "line": 236
+      },
+      {
+        "type": "button",
+        "label": "Filter",
+        "line": 256
+      },
+      {
+        "type": "button",
+        "label": "Create Dot",
+        "line": 259
+      },
+      {
+        "type": "button",
+        "label": "ACT_RETRY_LOAD",
+        "line": 315
+      },
+      {
+        "type": "button",
+        "label": "Retry",
+        "line": 366
+      },
+      {
+        "type": "button",
+        "label": "close",
+        "line": 373
+      },
+      {
+        "type": "button",
+        "label": "Logs",
+        "line": 419
+      },
+      {
+        "type": "button",
+        "label": "Config",
+        "line": 422
+      }
+    ],
+    "inputs": [
+      {
+        "type": "input",
+        "label": "Search dots...",
+        "inputType": "text",
+        "placeholder": "Search dots...",
+        "line": 254
+      }
+    ],
+    "hardcodedData": [],
+    "totalInteractive": 20,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  },
+  {
+    "screenId": "d992c14e4b6a4bdebbc2b566f7daebb9",
+    "screenTitle": "Insights - StatusDot Mini",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "link",
+        "label": "Overview",
+        "href": "#",
+        "line": 114
+      },
+      {
+        "type": "link",
+        "label": "System",
+        "href": "#",
+        "line": 118
+      },
+      {
+        "type": "link",
+        "label": "Network",
+        "href": "#",
+        "line": 122
+      },
+      {
+        "type": "link",
+        "label": "analytics",
+        "href": "#",
+        "line": 126
+      },
+      {
+        "type": "link",
+        "label": "Export",
+        "href": "#",
+        "line": 130
+      },
+      {
+        "type": "link",
+        "label": "Dashboard",
+        "href": "#",
+        "line": 150
+      },
+      {
+        "type": "link",
+        "label": "Analytics",
+        "href": "#",
+        "line": 151
+      },
+      {
+        "type": "link",
+        "label": "Logs",
+        "href": "#",
+        "line": 152
+      },
+      {
+        "type": "button",
+        "label": "Force Sync",
+        "line": 136
+      },
+      {
+        "type": "button",
+        "label": "menu",
+        "line": 144
+      },
+      {
+        "type": "button",
+        "label": "download",
+        "line": 155
+      },
+      {
+        "type": "button",
+        "label": "settings",
+        "line": 158
+      },
+      {
+        "type": "button",
+        "label": "Filter Insights",
+        "line": 173
+      },
+      {
+        "type": "button",
+        "label": "Export JSON",
+        "line": 177
+      }
+    ],
+    "navigation": [
+      {
+        "type": "link",
+        "label": "Overview",
+        "href": "#",
+        "line": 114
+      },
+      {
+        "type": "link",
+        "label": "System",
+        "href": "#",
+        "line": 118
+      },
+      {
+        "type": "link",
+        "label": "Network",
+        "href": "#",
+        "line": 122
+      },
+      {
+        "type": "link",
+        "label": "analytics",
+        "href": "#",
+        "line": 126
+      },
+      {
+        "type": "link",
+        "label": "Export",
+        "href": "#",
+        "line": 130
+      },
+      {
+        "type": "link",
+        "label": "Dashboard",
+        "href": "#",
+        "line": 150
+      },
+      {
+        "type": "link",
+        "label": "Analytics",
+        "href": "#",
+        "line": 151
+      },
+      {
+        "type": "link",
+        "label": "Logs",
+        "href": "#",
+        "line": 152
+      }
+    ],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "Force Sync",
+        "line": 136
+      },
+      {
+        "type": "button",
+        "label": "menu",
+        "line": 144
+      },
+      {
+        "type": "button",
+        "label": "download",
+        "line": 155
+      },
+      {
+        "type": "button",
+        "label": "settings",
+        "line": 158
+      },
+      {
+        "type": "button",
+        "label": "Filter Insights",
+        "line": 173
+      },
+      {
+        "type": "button",
+        "label": "Export JSON",
+        "line": 177
+      }
+    ],
+    "inputs": [],
+    "hardcodedData": [],
+    "totalInteractive": 14,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  }
+]
