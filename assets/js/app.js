@@ -12,6 +12,8 @@
     ]
   };
 
+  let app = null;
+
   function getEl(selector) {
     return document.querySelector(selector);
   }
@@ -35,7 +37,8 @@
 
     const header = createEl('div', 'dot-card__header');
     const dotVisual = createEl('span', 'dot-visual dot-visual--' + dot.status, {
-      'aria-label': 'Status: ' + dot.status
+      'aria-label': 'Status: ' + dot.status,
+      role: 'img'
     });
     const label = createEl('h2', 'dot-card__label');
     label.textContent = dot.label;
@@ -139,8 +142,6 @@
 
     window.setfarmStaticReady = true;
   }
-
-  let app = null;
 
   function start() {
     if (window.__STATUSDOT_MINI_SEED__) {
