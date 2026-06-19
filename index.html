@@ -9,11 +9,24 @@
   <body>
     <main data-setfarm-root="baseline" data-testid="setfarm-app-root" class="app-shell">
       <section class="hero">
-        <p class="eyebrow">Setfarm Static HTML</p>
-        <h1>StatusDot Mini</h1>
-        <p class="summary">Baseline static page ready for plain HTML, CSS, and JavaScript implementation.</p>
+        <p class="eyebrow">StatusDot Mini</p>
+        <h1>Three Operations</h1>
+        <p class="summary">Cycle each status dot through ready, warn, and fail. State persists automatically to localStorage.</p>
+      </section>
+
+      <section class="dot-grid" id="dot-grid" aria-label="Status dots">
+        <!-- Dots are rendered by app.js from state -->
+      </section>
+
+      <section class="actions">
+        <button class="btn btn--primary" data-action-id="ACT_EXPORT_SNAPSHOT" type="button">
+          Export JSON
+        </button>
       </section>
     </main>
+
+    <script src="assets/js/statusdot-mini.storage.js" defer></script>
+    <script src="assets/js/statusdot-mini.state.js" defer></script>
     <script src="assets/js/app.js" defer></script>
     <script src="assets/js/test-bridge.js" defer></script>
   </body>

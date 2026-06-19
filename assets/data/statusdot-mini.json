@@ -1,0 +1,19 @@
+{
+  "dots": [
+    {
+      "id": "dot-1",
+      "label": "Database Cluster Alpha",
+      "status": "ready"
+    },
+    {
+      "id": "dot-2",
+      "label": "API Gateway Beta",
+      "status": "warn"
+    },
+    {
+      "id": "dot-3",
+      "label": "Cache Node Gamma",
+      "status": "fail"
+    }
+  ]
+}
